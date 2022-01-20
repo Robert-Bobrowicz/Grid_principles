@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>display: grid</title>
+    <link href="css/main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <span>
+                    <h4>Header</h4>
+                    <p>grid definiowany poprzez wyliczenie w pętli szerokości kolumn</p>
+                    <p>poniżej 600px przechodzi w widok mobilny - jednokolumnowy</p>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"><span></span></div>
+            <div class="col-4"><span></span></div>
+            <div class="col-4"><span></span></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><span></span></div>
+            <div class="col-6"><span></span></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><span></span></div>
+            <div class="col-3"><span></span></div>
+            <div class="col-3"><span></span></div>
+            <div class="col-3"><span></span></div>
+        </div>
+        <div class="row">
+            <div class="col-12"><span><h4>Footer</h4></span></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container_1">
+            <div class="div-1">
+                <h4>Header</h4>
+                <p>grid definiowany poprzez display: grid</p>
+                <p>poniżej 600px przechodzi w widok mobilny - jednokolumnowy</p>
+            </div>
+            <div class="div-2"><h4>Main section</h4></div>
+            <div class="aside"><h4>Aside</h4></div>
+            <div class="div-3"><h4>Footer</h4></div>
+    </div>
+</body>
+</html>

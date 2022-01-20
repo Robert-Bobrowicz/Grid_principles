@@ -1,0 +1,62 @@
+@use "sass:math";
+$columns: 12;
+$gap: 10px;
+$bp: 600px;
+
+
+.container {
+  max-width: 1230px;
+  padding-left: $gap; // tyle by zrekompensować ujemny margin
+  padding-right: $gap;
+  margin: 0 auto;
+}
+
+[class ^= "col-"] {
+  padding: 0 $gap;
+  margin-bottom: $gap;
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left: -$gap; //tyle samo co padding ale ze znakiem -
+  margin-right: -$gap;
+
+
+  @media (min-width: $bp) {
+    display: flex;
+    flex-wrap: wrap;
+
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        width: math.div(100%, $columns) * $i;
+      }
+    }
+  }
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgray;
+    border: 1px solid orangered;
+    min-height: 50px;
+}
+
+.container > div:nth-child(1) > div > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    color: firebrick;
+  }
+}
